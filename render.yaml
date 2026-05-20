@@ -1,0 +1,23 @@
+services:
+  - type: worker
+    name: telegram-welcome-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: LOG_CHANNEL_ID
+        sync: false
+      - key: SUPPORT_LINK
+        sync: false
+      - key: BOT_NAME
+        sync: false
